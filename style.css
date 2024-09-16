@@ -1,0 +1,191 @@
+/* General Styles */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Result Container with Scrolling */
+#results {
+    max-height: 60vh;  /* Restrict the height to a portion of the viewport */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    margin-top: 20px;
+}
+
+/* Style each result item */
+.result-item {
+    background-color: #2e2e2e;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 800px;
+}
+
+/* Limit the size of the results and allow scrolling */
+.result-item p {
+    margin: 5px 0;
+}
+
+.result-item strong {
+    color: #1a73e8;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+input, select, button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #1a73e8;
+    color: white;
+}
+
+button:hover {
+    background-color: #1663c7;
+}
+
+#clearButton {
+    background-color: #ff4d4d;  /* Red color for the clear button */
+}
+
+#clearButton:hover {
+    background-color: #d43f3f;  /* Darker red on hover */
+}
+
+.error-message {
+    color: red;
+}
+
+/* Styles for the checkbox */
+label {
+    color: white;
+    margin-left: 10px;
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+#showAllButton {
+    background-color: #4caf50;  /* Green color for Show All button */
+    color: white;
+}
+
+#showAllButton:hover {
+    background-color: #45a049;  /* Darker green on hover */
+}
+
+.hidden {
+    display: none;
+}
+/* Style for the field dropdown */
+#fieldSelect {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #2e2e2e;
+    color: white;
+    display: inline-block;
+}
+
+#fieldSelect.hidden {
+    display: none;
+}
+
+#fieldSelect option {
+    background-color: #2e2e2e;
+    color: white;
+}
+
+/* Add flexbox to align items properly */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add some space between the elements */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Button styling for search and clear buttons */
+#searchButton, #clearButton {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+/* Clear button with distinct color */
+#clearButton {
+    background-color: #ff4d4d;  /* Red color */
+    margin-left: 10px; /* Ensure it has some spacing next to the search button */
+}
+
+#clearButton:hover {
+    background-color: #d43f3f;  /* Darker red on hover */
+}
+
+#searchButton {
+    background-color: #1a73e8;
+}
+
+#searchButton:hover {
+    background-color: #1663c7;
+}
+

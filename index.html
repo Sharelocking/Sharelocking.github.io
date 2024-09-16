@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+    <div class="container">
+        <div id="passwordContainer">
+            <h1>Enter Password</h1>
+            <div class="password-container">
+                <input type="password" id="passwordInput" placeholder="Password">
+                <button id="submitPassword">Submit</button>
+            </div>
+            <div id="passwordError" class="error-message hidden">Incorrect password. Please try again.</div>
+        </div>
+
+        <div id="searchContainer" class="hidden">
+            <h1>Search Database</h1>
+            <div class="search-container">
+                <select id="databaseSelect">
+                    <option value="" disabled selected>Select a database</option>
+                </select>
+                <select id="fieldSelect" class="hidden">
+                    <option value="" disabled selected>Select a field</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search...">
+                    <label>
+                        <input type="checkbox" id="exactMatchCheckbox"> Exact Match
+                    </label>
+                <!-- Make sure these buttons are aligned together -->
+                <button id="searchButton">Search</button>
+                <button id="clearButton" class="hidden">Clear</button>
+            </div>
+            <div id="loadingSpinner"></div>
+            <div id="loadingBar"></div>
+            <div id="noResultsMessage" class="hidden">No results found.</div>
+            <div id="results"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
